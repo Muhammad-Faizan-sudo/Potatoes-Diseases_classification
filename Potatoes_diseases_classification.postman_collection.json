@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "d54d3a58-c32d-4a6c-b75b-caa54fff6c48",
+		"name": "Potatoes_diseases_classification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test_the_server",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Dell/Documents/dataScienceProjects/potatoes_diseases_classfication/PlantVillage/Potato___healthy/00fc2ee5-729f-4757-8aeb-65c3355874f2___RS_HL 1864.JPG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_trained_model",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Dell/Documents/dataScienceProjects/potatoes_diseases_classfication/PlantVillage/Potato___Late_blight/00b1f292-23dd-44d4-aad3-c1ffb6a6ad5a___RS_LB 4479.JPG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/predict/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"predict",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
